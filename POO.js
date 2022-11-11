@@ -34,9 +34,15 @@ class gato {
     maullar(){
         console.log("miau");
     }
-    dormir();
-    ronronear();
-    arañar();
+    dormir(){
+        console.log("zzzz");
+    }
+    ronronear(){
+        console.log("Prrrr");
+    }
+    arañar(){
+        console.log("scratch, scratch");
+    }
 }
 
 //Para empezar a crear o instanciar objetos
@@ -49,3 +55,37 @@ var Chicharron = new gato("Chicharrón", 2, "arisco", "marrón clarito", "egipci
 var bolaDeEstambre = new gato("Bola de Estambre", 7, "amigable", "blaco", "mestiza");
 var Misifus = new gato("Misifus", 5, "intrigante", "negro", "desconocida");
 var Satanas = new gato("Satanás", 90, "cariñoso", "blaco y negro", "emisario del caos");
+
+console.log(donGato);
+console.log(Felix);
+console.log(Bigotes);
+console.log(Chicharron);
+console.log(bolaDeEstambre);
+console.log(Misifus);
+console.log(Satanas);
+
+console.log("******************************************");
+
+var Jirafa ={
+    nombre: "Giga",
+    edad: 2,
+    caracter: "Chido"
+}
+
+var JirafaJSON = {
+    "nombre": "Giga",
+    "edad": 1,
+    "caracter": "Chido"
+}
+
+console.log(typeof(Jirafa));
+console.log(typeof(JirafaJSON));
+
+//JSON.stringfy: de objeto a string para que el servidor lo lea
+const JirafaSerializada = JSON.stringify(Jirafa);
+console.log("El tipo de variable de JirafaSerializada es: ", typeof(JirafaSerializada), " y se lee así: ", JirafaSerializada);
+
+//JSON.parse(): para convertir un string a objeto JSON
+const JirafaDeserealizada = JSON.parse(JirafaSerializada);
+console.log("El tipo de variable de JirafaDeserealizada es: ", typeof(JirafaDeserealizada), " y se lee así: ", JirafaDeserealizada);
+
